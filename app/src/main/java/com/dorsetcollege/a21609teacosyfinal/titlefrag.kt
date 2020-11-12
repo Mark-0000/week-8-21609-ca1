@@ -15,6 +15,7 @@ class titleFrag : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_titlefrag, container, false)
+        //switching  to shopping fragment when shopping button button was pressed
         view.shoppingButton.setOnClickListener{Navigation.findNavController(view).navigate(R.id.navigate_to_shopping)}
         return view
     }

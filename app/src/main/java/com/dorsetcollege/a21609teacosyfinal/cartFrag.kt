@@ -17,6 +17,8 @@ class cartFrag : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_cart, container, false)
+
+        //switching back to title fragment when checkout button was pressed
         view.checkoutbutton.setOnClickListener{ Navigation.findNavController(view).navigate(R.id.navigate_to_title)}
         return view
     }
