@@ -20,6 +20,7 @@ class cartFrag : Fragment() {
 
         //switching back to title fragment when checkout button was pressed
         view.checkoutbutton.setOnClickListener{ Navigation.findNavController(view).navigate(R.id.navigate_to_title)}
+
         return view
     }
 
