@@ -73,8 +73,10 @@
         android:text="Proceed to Cart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.862"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.504" />
 
     <Button
         android:id="@+id/adddarjelling"
@@ -139,6 +141,70 @@
         android:text="Add"
         app:layout_constraintBottom_toTopOf="@+id/cartbutton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/darjellingquantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="72dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/adddarjelling"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/assamquantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="80dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/addassam"
+        app:layout_constraintTop_toBottomOf="@+id/darjellingquantity" />
+
+    <TextView
+        android:id="@+id/lapsangquantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="79dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/addlapsang"
+        app:layout_constraintTop_toBottomOf="@+id/assamquantity" />
+
+    <TextView
+        android:id="@+id/earlgreyquantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="79dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/addearlgrey"
+        app:layout_constraintTop_toBottomOf="@+id/lapsangquantity" />
+
+    <TextView
+        android:id="@+id/irishbreakfastquantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="38dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/addirishbreakfast"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="117dp"
+        android:text="reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cartbutton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 

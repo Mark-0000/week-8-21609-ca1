@@ -11,6 +11,9 @@ import kotlinx.android.synthetic.main.fragment_titlefrag.view.*
 
 class shoppingFrag : Fragment() {
 
+    //creeating object for class shopping viewModel
+    private lateinit var viewModel: shoppingViewModel
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
