@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/titleFrag">
+    <fragment
+        android:id="@+id/titleFrag"
+        android:name="com.dorsetcollege.a21609teacosyfinal.titleFrag"
+        android:label="fragment_titlefrag"
+        tools:layout="@layout/fragment_titlefrag" >
+        <action
+            android:id="@+id/navigate_to_shopping"
+            app:destination="@id/shoppingFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingFrag"
+        android:name="com.dorsetcollege.a21609teacosyfinal.shoppingFrag"
+        android:label="fragment_shopping"
+        tools:layout="@layout/fragment_shopping" >
+        <action
+            android:id="@+id/navigate_to_cart"
+            app:destination="@id/cartFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFrag"
+        android:name="com.dorsetcollege.a21609teacosyfinal.cartFrag"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/navigate_to_title"
+            app:destination="@id/titleFrag" />
+    </fragment>
+</navigation>
