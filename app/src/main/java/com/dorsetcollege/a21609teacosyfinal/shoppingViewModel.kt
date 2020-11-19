@@ -2,7 +2,7 @@ package com.dorsetcollege.a21609teacosyfinal
 
 import androidx.lifecycle.ViewModel
 
-class shoppingViewModel: ViewModel() {
+class shoppingViewModel: ViewModel(){
     // declaring variables (cost and quantity)
     var totalAmount = 0.0
     var totalQuantity = 0

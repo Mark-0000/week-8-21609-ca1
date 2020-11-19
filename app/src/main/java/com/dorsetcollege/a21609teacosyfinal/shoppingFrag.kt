@@ -11,6 +11,7 @@ import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_shopping.*
 import kotlinx.android.synthetic.main.fragment_shopping.view.*
 import kotlinx.android.synthetic.main.fragment_titlefrag.view.*
+import org.w3c.dom.Text
 
 
 class shoppingFrag : Fragment() {
@@ -18,7 +19,6 @@ class shoppingFrag : Fragment() {
     //creeating object for class shopping viewModel
     private lateinit var viewModel: shoppingViewModel
 
-    var x = 25
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -37,7 +37,6 @@ class shoppingFrag : Fragment() {
         view.addirishbreakfast.setOnClickListener{onI()}
         view.reset.setOnClickListener{onR()}
         viewModel.delivery()
-        textUpdate()
         return view
     }
 
@@ -45,42 +44,50 @@ class shoppingFrag : Fragment() {
     //add darjelling method
     private fun onD(){
         viewModel.addDarjelling()
-        textUpdate()
-
+        //darjellingquantity.setText(viewModel.darjellingquan.toString())
+        updateText()
     }
     //add assam method
     private fun onA(){
         viewModel.addAssam()
-        textUpdate()
-
+        //assamquantity.setText(viewModel.assamquan.toString())
+        updateText()
     }
     //add lapsang method
     private fun onL(){
         viewModel.addLapsang()
-        textUpdate()
-
+        //lapsangquantity.setText(viewModel.lapsangquan.toString())
+        updateText()
     }
     //add earlgrey method
     private fun onE(){
         viewModel.addEarlGrey()
-        textUpdate()
-
+        //earlgreyquantity.setText(viewModel.earlgreyquan.toString())
+        updateText()
     }
     //add irish breakfast method
     private fun onI(){
         viewModel.addIrishBreakfast()
-        textUpdate()
-
+        //irishbreakfastquantity.setText(viewModel.irishbreakfastquan.toString())
+        updateText()
+    }
+    private fun updateText(){
+        irishbreakfastquantity.setText(viewModel.irishbreakfastquan.toString())
+        assamquantity.setText(viewModel.assamquan.toString())
+        lapsangquantity.setText(viewModel.lapsangquan.toString())
+        darjellingquantity.setText(viewModel.darjellingquan.toString())
+        earlgreyquantity.setText(viewModel.earlgreyquan.toString())
     }
 
     //reset method
     private fun onR(){
-        textUpdate()
+        viewModel.reset()
+        irishbreakfastquantity.setText(viewModel.irishbreakfastquan.toString())
+        assamquantity.setText(viewModel.assamquan.toString())
+        lapsangquantity.setText(viewModel.lapsangquan.toString())
+        darjellingquantity.setText(viewModel.darjellingquan.toString())
+        earlgreyquantity.setText(viewModel.earlgreyquan.toString())
+    }
 
-    }
-    // updating the text
-    private fun textUpdate(){
-        //darjellingquantity.text = x.toString()
-    }
 
 }
